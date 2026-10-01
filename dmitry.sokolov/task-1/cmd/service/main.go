@@ -3,9 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	var operand1 int
-	var operand2 int
-	var operation string
+	var (
+		operand1  int
+		operand2  int
+		operation string
+	)
 
 	_, err := fmt.Scan(&operand1)
 	if err != nil {
@@ -25,20 +27,20 @@ func main() {
 		return
 	}
 
-	if operation == "+" {
+	switch operation {
+	case "+":
 		fmt.Println(operand1 + operand2)
-	} else if operation == "-" {
-		fmt.Println(operand1 - operand2)
-	} else if operation == "*" {
-		fmt.Println(operand1 * operand2)
-	} else if operation == "/" {
+	case "-":
+		fmt.Println(operand1 + operand2)
+	case "*":
+		fmt.Println(operand1 + operand2)
+	case "/":
 		if operand2 == 0 {
 			fmt.Println("Division by zero")
 			return
 		}
-
-		fmt.Println(operand1 / operand2)
-	} else {
+		fmt.Println(operand1 + operand2)
+	default:
 		fmt.Println("Invalid operation")
 	}
 }
