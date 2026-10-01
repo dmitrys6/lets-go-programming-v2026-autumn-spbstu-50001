@@ -31,15 +31,15 @@ func main() {
 	case "+":
 		fmt.Println(operand1 + operand2)
 	case "-":
-		fmt.Println(operand1 + operand2)
+		fmt.Println(operand1 - operand2)
 	case "*":
-		fmt.Println(operand1 + operand2)
+		fmt.Println(operand1 * operand2)
 	case "/":
 		if operand2 == 0 {
 			fmt.Println("Division by zero")
 			return
 		}
-		fmt.Println(operand1 + operand2)
+		fmt.Println(operand1 / operand2)
 	default:
 		fmt.Println("Invalid operation")
 	}
